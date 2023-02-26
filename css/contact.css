@@ -1,0 +1,55 @@
+/* Styles that apply to every element in the body, unless overridden */
+body {
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    height: 100vh;
+  }
+
+  .page_title {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+  }
+
+  hr {
+    border: 1px solid darkblue;
+  }
+  
+  /* Styles any list item in an unordered list */
+  main ul li {
+    color: #054C4C;
+    font-size: large;  /* Overrides body font size above */
+    font-style: oblique; /* Adds oblique style to text of list items */
+  }
+  
+  /* A "generic" class whose styles can be applied to any element */
+  .BoldItalic {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  /* A class that can only be applied to paragraph elements */
+  p.Standout {
+    padding: 15px; /* on all four sides of any paragraph with this style */
+    color: #FFFF88;
+    background-color: #340909;
+  }
+  
+  .form_style {
+    background-color: azure;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color:#000;
+  }
+
+  #BlankNotice {
+    color: red;
+    border-style: double;
+    padding-right: 5px;
+    padding-left: 5px;
+  }

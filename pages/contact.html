@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Form</title>
+        <base href="/project/">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/maincontent.css">
+        <link rel="stylesheet" href="css/navbar.css">
+    </head>
+    <body>
+        <!--#include virtual="../common/nav_bar.html"-->
+        <main>
+            <h1 class="page_title">
+                Practice Contact Form!
+            </h1>
+            <hr>
+            <p id="introductionParagraph">
+                This is a website utilized for practicing HTML and CSS for the course CSCE 464!
+                Here is mumble jumble to pad out the paragraph. Here is mumble jumble to pad out the paragraph.
+                Here is mumble jumble to pad out the paragraph. Here is mumble jumble to pad out the paragraph.
+                Here is mumble jumble to pad out the paragraph. Here is mumble jumble to pad out the paragraph.
+                Here is mumble jumble to pad out the paragraph. Here is mumble jumble to pad out the paragraph.
+                Here is mumble jumble to pad out the paragraph. Here is mumble jumble to pad out the paragraph.
+            </p>
+            <p class="Standout">
+                Here is text meant to stand out!
+            </p>
+            <form class="form_style" id="testForm">
+                <table>
+                    <tr>
+                        <td>
+                            <label>First Name:</label>
+                            <input type="text" value="First Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Last Name:</label>
+                            <input type="text" value="Last Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Select the pets that you have (If you have none, leave <b id="BlankNotice">blank</b>):</p>
+                            <label>Dog</label>
+                            <input type="checkbox" value="dog">
+                            <label>Cat</label>
+                            <input type="checkbox" value="cat">
+                            <label>Other</label>
+                            <input type="checkbox" value="other">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Tell me why you're contacting me?</p>
+                            <hr>
+                            <textarea name="message" rows="6" cols="50">Reason for contacting me here!</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </main>
+    </body>
+</html>
