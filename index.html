@@ -7,22 +7,7 @@
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="navbar_list">
-            <li class="navbar_heading"><h1 class="navbar_heading_text">Navigation</h1></li>
-            <li class="navbar_item">
-                <a class="navbar_link" href="index.html">Home</a>
-            </li>
-            <li class="navbar_item">
-                <a class="navbar_link" href="pages/contact.html">Contact Form</a>
-            </li>
-            <li class="navbar_item">
-                <a class="navbar_link" href="pages/creative.html">Creative Works</a>
-            </li>
-        </ul>
-    </nav>
-
-    {% common nav_bar.html %}
+    {% include nav_bar.html %}
     <main>
         <!-- main content -->
         <h1 class="page_title">Home</h1>
