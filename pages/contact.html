@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="css/contact.css">
         <link rel="stylesheet" href="css/maincontent.css">
         <link rel="stylesheet" href="css/navbar.css">
+        <script src="scripts/contactFormProcess.js"></script>
+        <script src="scripts/contactFormValidate.js"></script>
     </head>
     <body>
         {% include nav_bar.html %}
@@ -40,6 +42,12 @@
                         <td>
                             <label>Last Name:</label>
                             <input type="text" value="Last Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">E-mail Address:</label>
+                            <input id="email" type="text" name="email" size="40">
                         </td>
                     </tr>
                     <tr>
