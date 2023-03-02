@@ -1,7 +1,6 @@
 function starRatingAppear(starObj) {
     starList = document.querySelectorAll(".bi-star-fill");
    if (starObj.id == "star1") {
-    console.log("test");
     starList[0].classList.add("filled");
     starList[1].classList.remove("filled");
     starList[2].classList.remove("filled");
