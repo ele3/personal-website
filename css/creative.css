@@ -8,10 +8,6 @@ h1.main_heading {
     margin: 5px;
 }
 
-hr {
-    border: 1px solid darkblue;
-}
-
 .flex_container {
     display: flex;
     flex-direction: column;

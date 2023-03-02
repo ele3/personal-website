@@ -5,3 +5,7 @@ main {
     width: 1500px; 
     background-color: lightblue;
 }
+
+hr {
+    border: 1px solid darkblue;
+}

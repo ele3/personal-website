@@ -1,0 +1,166 @@
+body {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.page_title {
+    margin: 5px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.mainContentsContainer {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.feedbackFormContainer {
+    width: 500px;
+    background: #16292c;
+    box-shadow: 1px 1px 6px black;
+    opacity: 0.75;
+}
+
+#feedbackForm {
+    width: 1;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.answerInput {
+    padding: 10px;
+    position: relative;
+}
+
+form label {
+    font-size: 20px;
+}
+
+.answerInput input {
+    width: 100%;
+    height: 75%;
+    margin: 6px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid darkgray;
+    border-radius: 3.5px;
+}
+
+form textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 75%;
+    margin: 6px 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid darkgray;
+    border-radius: 3.5px;
+    font-size: 15px;
+}
+
+.answerInput:focus-within {
+    color: rgb(189, 253, 253);
+    font-size: 20px;
+    transition: all 0.25s ease;
+}
+
+.answerInput input:focus,
+form textarea:focus {
+    background-color: rgb(58, 58, 58);
+    border: 2px solid rgb(213, 225, 254);
+    color:rgb(213, 225, 254);
+    transition: 0.2s;
+}
+
+.answerInput input:focus::placeholder,
+form textarea:focus::placeholder {
+    color:rgb(213, 225, 254);
+    padding-left: 5px;
+    opacity: 0.2;
+    transition: 0.2s;
+}
+
+/* Use the commented if a RESET button is used along with submit */
+
+/* .buttons {
+    justify-content: center;
+    align-content: center;
+} */
+
+/* .buttons input {
+    background-color: rgb(120, 156, 255);
+    border: 2px solid darkgray;
+    width: 42.5%;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+} */
+
+/* .buttons input:hover {
+    background-color:rgb(43, 59, 103);
+    color: white;
+    scale: 1.05;
+    opacity: 0.9;
+    transition: 0.2s ease;
+    cursor: pointer;
+} */
+
+.submitButton {
+    background-color: rgb(120, 156, 255);
+    border: 2px solid darkgray;
+    margin: 3px;
+    width: 85%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.submitButton:hover {
+    background-color:rgb(43, 59, 103);
+    color: white;
+    scale: 1.05;
+    opacity: 0.9;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+#star1,
+#star2,
+#star3,
+#star4,
+#star5 {
+    margin: 15px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+i.empty {
+    color: lightgray;
+    opacity: 0.25;
+    font-size: 50px;
+    transition: 0.3s ease;
+}
+
+i.filled {
+    opacity: 1;
+    color: rgb(112, 253, 253);
+    font-size: 50px;
+}

@@ -1,0 +1,53 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my first website</title>
+    <base href="/personal-website/">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/maincontent.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="scripts/starRating.js"></script>
+    <script src="scripts/feedbackFormProcess.js"></script>
+    <script src="scripts/feedbackFormValidate.js"></script>
+</head>
+<body>
+    {% include nav_bar.html %}
+    {{ content }}
+    <main>
+        <h1 class="page_title">
+            Feedback Form
+        </h1>
+        <hr>
+        <div class="mainContentsContainer">
+            <div class="feedbackFormContainer">
+                <form id="feedbackForm" onsubmit="feedbackFormProcess()">
+                    <h1 class="formTitle">Please Provide Feedback</h1>
+                    <div id="starRatingContainer">
+                        <i class="bi bi-star-fill empty" id="star1" onclick="starRatingAppear(this)"></i>
+                        <i class="bi bi-star-fill empty" id="star2" onclick="starRatingAppear(this)"></i>
+                        <i class="bi bi-star-fill empty" id="star3" onclick="starRatingAppear(this)"></i>
+                        <i class="bi bi-star-fill empty" id="star4" onclick="starRatingAppear(this)"></i>
+                        <i class="bi bi-star-fill empty" id="star5" onclick="starRatingAppear(this)"></i>
+                    </div>
+                    <div class="answerInput">
+                        <label>Email Address:</label>
+                        <br>
+                        <input id="email" name="email" type="email" placeholder="Email Address">
+                    </div>
+                    <div class="answerInput">
+                        <label>Leave a Message:</label>
+                        <textarea id="message" name="message" rows="6" cols="50" placeholder="Write your message here!"></textarea>
+                    </div>
+                    <input type="submit" value="SUBMIT" class="submitButton">
+                    <!-- <div class="buttons">
+                        <input type="submit" value="SUBMIT">
+                        <input type="reset" value="RESET">
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </main>
+</body>

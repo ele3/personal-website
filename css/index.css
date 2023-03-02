@@ -15,10 +15,6 @@ h1.main_content_heading, h2.main_content_heading{
     padding-bottom: 0;
 }
 
-hr {
-    border: 1px solid darkblue;
-}
-
 ul li {
     font-size: medium;
 }
