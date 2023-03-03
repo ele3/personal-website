@@ -40,3 +40,21 @@ function areStarsFilled(starList) {
     }
     return flag;
 }
+
+function wordCount(textbox) {
+    var split = textbox.trim().replace(/\s+/g, ' ').split(' ');
+    var count = split.length;
+
+    return count;
+}
+
+function starRatingCount(starList) {
+    let count = 0;
+    let length = starList.length;
+    for (var i = 0; i < length; i++) {
+        if (starList[i].classList.contains("filled")) {
+            count++;
+        }
+    }
+    return count;
+}
