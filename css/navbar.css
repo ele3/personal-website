@@ -100,3 +100,7 @@
 #navFormDropdown h4:hover {
     cursor: default;
 }
+
+.disabledNavLink {
+    pointer-events: none;
+}
