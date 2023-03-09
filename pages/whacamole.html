@@ -1,0 +1,53 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whac-A-Mole Game</title>
+    <base href="/personal-website/">
+    <link rel="stylesheet" href="css/whacamole.css">
+    <link rel="stylesheet" href="css/maincontent.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    {% include nav_bar.html %}
+    {{ content }}
+    <main>
+        <!-- main content -->
+        <h1 class="page_title">Whac-A-Mole</h1>
+        <hr>
+
+        <div class="whac-a-mole-container">
+            <div class="all-label-container">
+                <div class="label-container">
+                    <h2>Score: </h2>
+                    <h2 id="score">0</h2>
+                </div>
+                <div class="label-container">
+                    <h2>Time Left: </h2>
+                    <h2 id="time-left">20</h2>
+                </div>
+            </div>
+            <div class="all-button-container">
+                <button class="start-button" onclick="moveMole()">Start</button>
+                <button class="reset-button" onclick="restartGame()">Reset</button>
+            </div>
+            <div class="grid-container">
+                <div class="grid">
+                    <div class="square" id="1"></div>
+                    <div class="square" id="2"></div>
+                    <div class="square" id="3"></div>
+                    <div class="square" id="4"></div>
+                    <div class="square" id="5"></div>
+                    <div class="square" id="6"></div>
+                    <div class="square" id="7"></div>
+                    <div class="square" id="8"></div>
+                    <div class="square" id="9"></div>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <script src="scripts/whacamole.js"></script>
+</body>
+</html>
