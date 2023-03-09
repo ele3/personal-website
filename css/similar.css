@@ -1,0 +1,146 @@
+body {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.page_title {
+    margin: 5px;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.mainContentsContainer {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.similarFormContainer {
+    width: 500px;
+    background: #16292c;
+    box-shadow: 1px 1px 6px black;
+    opacity: 0.75;
+}
+
+#similarForm {
+    width: 1;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.answerInput {
+    padding: 10px;
+    position: relative;
+}
+
+form label {
+    font-size: 20px;
+}
+
+.submitButton {
+    background-color: rgb(120, 156, 255);
+    border: 2px solid darkgray;
+    margin: 3px;
+    width: 85%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.submitButton:hover {
+    background-color:rgb(43, 59, 103);
+    color: white;
+    scale: 1.05;
+    opacity: 0.9;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.similarDropdown {
+    margin: 10px;
+    position: relative;
+}
+
+.selectContainer {
+    background-color: rgb(58, 58, 58);
+    border: 2px solid rgb(213, 225, 254);
+    color:rgb(213, 225, 254);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7.5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.selectContainer:hover {
+    background: lightblue;
+    color: black;
+    transition: 0.3s;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -7.5px;
+}
+
+.menu {
+    list-style: none;
+    color: #9fa5b5;
+    background: #36383e;
+    border: 1px #202021 solid;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px black;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 90%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.menu li {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: rgb(88, 90, 95);
+}
+
+.highlighted {
+    background: #989cb2;
+    color: black;
+}
+
+.open {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.imageContainer {
+    display: flex;
+    padding-top: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+#placeholderImage {
+    border: 2px solid black;
+    box-shadow: 1px 1px 3px black;
+}

@@ -1,0 +1,49 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Similar Quiz</title>
+    <base href="/personal-website/">
+    <link rel="stylesheet" href="css/similar.css">
+    <link rel="stylesheet" href="css/maincontent.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <script src="scripts/similarFormProcess.js"></script>
+    <script src="scripts/startRotate.js"></script>
+</head>
+<body>
+    {% include nav_bar.html %}
+    {{ content }}
+    <main>
+        <h1 class="page_title">
+            Are You Similar To Me? (Used to test Drop Down Menu & Image Rotation)
+        </h1>
+        <hr>
+        <div class="mainContentsContainer">
+            <div class="similarFormContainer">
+                <form id="similarForm" onsubmit="similarFormProcess()">
+                    <h1 class="formTitle">Select Your Favorite Pet</h1>
+                    <div class ="similarDropdown">
+                        <div class="selectContainer">
+                            <span class ="selected">Choose An Option</span>
+                        </div>
+                        <div class="menuContainer">
+                            <ul class="menu">
+                                <li >Dogs</li>
+                                <li>Cats</li>
+                                <li>Other</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script src="scripts/similarDropdown.js"></script>
+                    <input type="submit" value="SUBMIT" class="submitButton">
+                </form>
+            </div>
+        </div>
+        <div class="imageContainer">
+            <img id="placeholderImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Question_mark_%28black%29.svg/800px-Question_mark_%28black%29.svg.png" 
+            width="250px" height="250px">
+        </div>
+    </main>
+</body>
+</html>

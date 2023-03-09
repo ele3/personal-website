@@ -30,7 +30,6 @@ h1.main_heading {
     background-image: url("/personal-website/images/pool_image.png");
     background-size: 270px 362px;
     background-position: center;
-    position: relative;
     margin-right: 10px;
     margin-left: 5px;
     margin-top: 15px;
@@ -48,7 +47,6 @@ h1.main_heading {
     background-image: url("/personal-website/images/study_image.png");
     background-size: 280px 260px;
     background-position: center;
-    position: relative;
     margin-right: 10px;
     margin-left: 5px;
     margin-top: 15px;
@@ -66,7 +64,6 @@ h1.main_heading {
     background-image: url("/personal-website/images/poster_image.png");
     background-size: 260px 260px;
     background-position: center;
-    position: relative;
     margin-right: 10px;
     margin-left: 5px;
     margin-top: 15px;
