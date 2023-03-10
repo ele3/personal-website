@@ -84,7 +84,7 @@
 
 .navbar_list div a:hover {
     background-color: lightskyblue;
-    color: white;
+    color: black;
     text-indent: 5px;
     transition: all .25s ease;
 }
