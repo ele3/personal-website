@@ -22,3 +22,17 @@ function hide()
     if (isShowing) dropdownMenu.style.visibility = 'hidden';
     isShowing = false;
 }
+
+function changeTheme() {
+    const main = document.querySelector('main');
+    const themeIcon = document.getElementById('theme_icon');
+    if (main.classList.contains('dark-theme')) {
+        main.classList.remove('dark-theme');
+        themeIcon.classList.remove('bi-brightness-high-fill');
+        themeIcon.classList.add('bi-moon-stars-fill');
+    } else {
+        main.classList.add('dark-theme');
+        themeIcon.classList.remove('bi-moon-stars-fill');
+        themeIcon.classList.add('bi-brightness-high-fill');
+    }
+}

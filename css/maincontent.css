@@ -9,3 +9,9 @@ main {
 hr {
     border: 1px solid darkblue;
 }
+
+.dark-theme {
+    background-color: #303234;
+    color: white;
+    transition: 1s ease;
+}

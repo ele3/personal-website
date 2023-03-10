@@ -2,7 +2,7 @@
     width: 144px;
     height: 100vh;
     position: fixed; 
-    background-color: #303234;
+    background-color: #252e36;
     box-shadow: 1px 1px 4px 0.5px darkgray;
 }
 
@@ -103,4 +103,16 @@
 
 .disabledNavLink {
     pointer-events: none;
+}
+
+.navbar_item:last-child {
+    margin-top: auto;
+}
+
+#theme_button {
+    font-size: 26px;
+}
+
+#theme_button:hover {
+    cursor: pointer;
 }

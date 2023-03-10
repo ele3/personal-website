@@ -20,7 +20,7 @@ ul li {
 }
 
 ul .current {
-    color: darkblue;
+    color: rgb(176, 105, 241);
     font-weight: bold;
 }
 
