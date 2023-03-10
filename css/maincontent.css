@@ -4,6 +4,7 @@ main {
     padding-bottom: 10px;
     width: 1500px; 
     background-color: lightblue;
+    transition: 1s ease;
 }
 
 hr {
