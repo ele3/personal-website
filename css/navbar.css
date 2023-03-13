@@ -4,6 +4,7 @@
     position: fixed; 
     background-color: #252e36;
     box-shadow: 1px 1px 4px 0.5px darkgray;
+    z-index: 999;
 }
 
 .navbar_list {

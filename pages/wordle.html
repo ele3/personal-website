@@ -1,0 +1,88 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wordle</title>
+    <base href="/project/">
+    <link rel="stylesheet" href="css/wordle.css">
+    <link rel="stylesheet" href="css/maincontent.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    {% include nav_bar.html %}
+    {{ content }}
+    <main>
+        <div class="wordleMainContent wordleMainContentUnblur">
+            <h1 class="page_title">
+                Wordle of my Favorite Things!
+            </h1>
+            <hr>
+            <div class="gameContainer">
+                <div class="gridContainer">
+                    <i class="bi bi-question-circle-fill" id="infoIcon"></i>
+                    <div class="heading">
+                        <h2>WORDLE</h2>
+                    </div>
+                    <div class="grid">
+                        <!-- test -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupContainer popupHidden">
+            <div class="howtoplayPopup">
+                <div class="popupTitle">
+                    <h2>How to play:</h2>
+                </div>
+                <div class="popupContent">
+                    <p>Guess the Wordle in 6 tries.</p>
+                    <ul>
+                        <li>
+                            Each guess must be a valid 5-letter word.
+                        </li>
+                        <li>
+                            The color of the tiles will change to show how close your guess was to the word.
+                        </li>
+                    </ul>
+                    <img src="images/howtoWordle.png" alt="Wordle How To">
+                    <ul>
+                        <li>
+                            <b>S</b> is in the word and in the CORRECT spot.
+                        </li>
+                        <li>
+                            <b>P</b> is in the word and in the WRONG spot.
+                        </li>
+                        <li>
+                            <b>O O K</b> is NOT in the word.
+                        </li>
+                    </ul>
+                    <div class="popupButtonContainer">
+                        <button id="closePopup">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupContainer popupHidden" id="winPopupContainer">
+            <div class="winPopup">
+                <h2>Congraulations!</h2>
+                <h2>You guessed the word!</h2>
+                <div class="endButtonContainer">
+                    <button id="endButton" onclick="window.location.reload()">Play Again?</button>
+                </div>
+            </div>
+        </div>
+        <div class="popupContainer popupHidden" id="losePopupContainer">
+            <div class="losePopup">
+                <h2>Better Luck Next Time!</h2>
+                <h3>The word was:</h2>
+                <h2 id="correctAnswer"></h2>
+                <div class="endButtonContainer">
+                    <button id="endButton" onclick="window.location.reload()">Play Again?</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/wordle.js" type="module"></script>
+</body>
