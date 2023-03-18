@@ -1,7 +1,7 @@
-//Flag to indicate if a dropdown menu is visible
+//Flag for dropdown menu visibility
 var isShowing = false;
 
-//Reference to the current dropdown menu
+//Current dropdown menu reference
 var dropdownMenu = null;
 
 //Show the drop-down menu with the given id, if it exists, and set flag
@@ -16,7 +16,7 @@ function show(id)
     }
 }
 
-//Hide the currently visible dropdown menu and set flag
+//Hide the currently visible dropdown menu and set flag for dropdown menu visibility to false
 function hide()
 {       
     if (isShowing) dropdownMenu.style.visibility = 'hidden';

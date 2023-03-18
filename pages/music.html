@@ -1,0 +1,61 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Songs</title>
+    <base href="/personal-website/">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/maincontent.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    {% include nav_bar.html %}
+    {{ content }}
+    <main>
+        <h1 class="main_heading">My Favorite Songs!</h1>
+        <hr>
+        <div class="music-player-container-container">
+            <div class="music-player-container">
+                <div class="music-player">
+                    <div class="song-info">
+                        <!-- Song title and Artist -->
+                        <h2 class="header-of-current-song-heading">SONG</h2>
+                        <div class="current-song-heading"></div>
+                        <div class="song-image"></div>
+                        <div class="song-titles">
+                            <div class="song-name"></div>
+                            <div class="song-artist"></div>
+                        </div>
+                    </div>
+                    <div class="position-slider-container">
+                        <!-- Song Slider -->
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100" value="0" class="position-slider" onchange="goToPosition()">
+                        <div class="total-duration">00:00</div>
+                    </div>
+                    <div class="volume-slider-container">
+                        <i class="bi bi-volume-down-fill volumeIcon"></i>
+                        <input type="range" min="1" max="100" value="10" class="volume-slider" onchange="setVolume()">
+                        <i class="bi bi-volume-up-fill volumeIcon"></i>
+                    </div>
+                    <div class="song-controls">
+                        <!-- Play, Pause, Previous, Next -->
+                        <div class="prev-song" onclick="prevSong()">
+                            <i class="bi bi-arrow-left-circle"></i>
+                        </div>
+                        <div class="playpause-song" onclick="playpauseSong()">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <div class="next-song" onclick="nextSong()">
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/music.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+body {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+}
+
+h1.main_heading {
+    margin: 5px;
+}
+
+.music-player-container-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.music-player-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    /* background-color: rgb(249, 231, 204); */
+    background: linear-gradient(90deg , rgb(249, 231, 204) 0%, rgb(255, 255, 255) 100%);
+    box-shadow: 0px 1px 10px black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.75);
+    user-select: none;
+    background-size: cover;
+    background-position: center;
+    margin: 28px auto;
+}
+
+.header-of-current-song-heading {
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current-song-heading {
+    color: gray;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.song-name {
+    max-width: 300px;
+    color: #222222;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.song-artist {
+    max-width: 300px;
+    color: #a19b9b;
+    font-size: 20px;
+}
+
+.song-titles {
+    border: 2px solid rgb(0, 0, 0, 0.5);
+    padding: 2px 10px;
+    width: 100%;
+    background: white;
+}
+
+.position-slider-container {
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-slider-container {
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.song-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-song, .playpause-song, .next-song {
+    color: black;
+    margin: 20px;
+    cursor: pointer;
+    opacity: 0.25;
+}
+
+.prev-song, .next-song {
+    font-size: 50px;
+}
+
+.playpause-song {
+    font-size: 70px;
+}
+
+.prev-song:hover, .playpause-song:hover, .next-song:hover {
+    color: rgb(28, 86, 173);
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.5s ease;
+}
+
+.volume-slider, .position-slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #adc3f9;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    transition: opacity .2s;
+}
+
+/* Chrome Thumb Slider */
+.volume-slider::-webkit-slider-thumb, .position-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: white;
+    border: 3px solid #adc3f9;
+    cursor: pointer;
+}
+
+/* FireFox Thumb Slider */
+.volume-slider::-moz-range-thumb, .position-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: white;
+    border: 3px solid #adc3f9;
+    cursor: pointer;
+}
+
+/* Internet Explorer Thumb Slider*/
+.volume-slider::-ms-thumb, .position-slider::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: white;
+    border: 3px solid #adc3f9;
+    cursor: pointer;
+}
+
+.position-slider {
+    width: 100%;
+}
+
+.volume-slider {
+    background: linear-gradient(90deg, rgb(7, 45, 102) 15%, rgb(173, 195, 249) 15%);
+    width: 50%;
+}
+
+.current-time, .total-duration {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+.volumeIcon {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+.transition-rotate {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-name: rotate;
+}
+
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}

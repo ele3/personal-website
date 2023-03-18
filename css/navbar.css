@@ -117,3 +117,7 @@
 #theme_button:hover {
     cursor: pointer;
 }
+
+#theme_contents {
+    padding-left: 5px;
+}
