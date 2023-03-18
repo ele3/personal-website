@@ -33,7 +33,7 @@ const songs = [
         name: '20 Min',
         artist: 'Lil Uzi Vert',
         imagePath: 'images/20minSongCover.jpg',
-        musicPath: 'music/20 Min.mp3',
+        musicPath: 'music/20min.mp3',
     },
     {
         name: 'Lady (Hear Me Tonight)',
