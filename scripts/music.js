@@ -30,16 +30,16 @@ const songs = [
         musicPath: 'music/I want you back.mp3',
     },
     {
-        name: 'Lady (Hear Me Tonight)',
-        artist: 'Modjo',
-        imagePath: 'images/LadyHearMeTonightSongCover.jpg',
-        musicPath: 'music/lady hear me tonight.mp3',
-    },
-    {
         name: '20 Min',
         artist: 'Lil Uzi Vert',
         imagePath: 'images/20minSongCover.jpg',
         musicPath: 'music/20min.mp3',
+    },
+    {
+        name: 'Lady',
+        artist: 'Modjo',
+        imagePath: 'images/LadyHearMeTonightSongCover.jpg',
+        musicPath: 'music/lady hear me tonight.mp3',
     }
 ];
 
