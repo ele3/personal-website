@@ -54,6 +54,7 @@ volumeSlider.addEventListener('mousemove', () => {
 });
 
 initSong(songIndex);
+initVolume();
 
 function initSong(songIndex) {
     clearInterval(timeInterval);
@@ -71,12 +72,14 @@ function initSong(songIndex) {
     songImage.style.backgroundImage = `url(${songs[songIndex].imagePath})`;
     currentSongHeading.textContent = `${songIndex + 1} of ${songs.length}`;
 
-    currentSongAudio.volume = 0.1;
-
     timeInterval = setInterval(updateTimer, 1000);     //Every second (1000ms), the current time and total duration of the song is updated
 
     currentSongAudio.addEventListener('ended', nextSong);
 
+}
+
+function initVolume() {
+    currentSongAudio.volume = 0.1;
 }
 
 //Function to update the current time and total duration of the song
