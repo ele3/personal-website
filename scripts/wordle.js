@@ -161,6 +161,7 @@ function revealWord(word) {
             }
             else if (remainingLetters.includes(letter)) {
                 square.classList.add('wrongPlace');
+                remainingLetters = remainingLetters.replace(letter, '');
             } else {
                 square.classList.add('incorrect');
             }
