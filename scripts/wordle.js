@@ -140,23 +140,26 @@ function notValidWord() {
 // Reveal the word and check if the user won or lost
 function revealWord(word) {
     const animationDuration = 500;             // 0.5 seconds
+    let correctArray = [0, 0, 0, 0, 0];
+    let remainingLetters = currentState.answer;
+
+    // Check for correct positions in the word and removes the letter from the remaining letters
+    for (let column = 0; column < 5; column++) {
+        if (word[column] === currentState.answer[column]) {
+            correctArray[column] = 1;
+            remainingLetters = remainingLetters.replace(word[column], '');  //Replace only affects the first occurence of the letter
+        }
+    }
+
     for (let column = 0; column < 5; column++) {
         const square = document.querySelector(`#square-${currentState.currentRow}-${column}`);
         const letter = square.textContent;
 
-        //Below checks for multiple of the same letter in the word
-        const answerLetterFrequency = letterFrequencyToPosition(currentState.answer, letter, 5);
-        const guessLetterFrequencyToPosition = letterFrequencyToPosition(word, letter, column);
-
-
         setTimeout(() => {
-            // The if statement below checks number of occurences at that position for the guess word has exceeded the amount of occurences in the answer word
-            if (guessLetterFrequencyToPosition > answerLetterFrequency) {
-                square.classList.add('incorrect');
-            }
-            else if (letter === currentState.answer[column]) {
+            if (correctArray[column] === 1) {
                 square.classList.add('correct');
-            } else if (currentState.answer.includes(letter)) {
+            }
+            else if (remainingLetters.includes(letter)) {
                 square.classList.add('wrongPlace');
             } else {
                 square.classList.add('incorrect');
@@ -172,13 +175,13 @@ function revealWord(word) {
     const loseFlag = currentState.currentRow === 5 ? true : false;
 
     if (guessedCorrect) {
-        // Do a celebration animation
+        // Pop up a win message
         setTimeout(() => {
             document.getElementById('winPopupContainer').classList.remove('popupHidden');
             document.querySelector('.wordleMainContent').classList.remove('wordleMainContentUnblur');
         }, 1500);
     } else if (loseFlag) {
-        // Do a sad animation
+        // Pop up a lose message which also reveals correct answer
         setTimeout(() => {
             document.getElementById('losePopupContainer').classList.remove('popupHidden');
             document.querySelector('.wordleMainContent').classList.remove('wordleMainContentUnblur');
@@ -207,17 +210,6 @@ function addLetter(key) {
         currentState.currentColumn++;
         square.classList.add('inputted');
     }
-}
-
-// Returns the number of times a letter appears in a word up to a certain position
-function letterFrequencyToPosition(word, letter, position) {
-    let frequency = 0;
-    for (let i = 0; i <= position; i++) {
-        if (word[i] === letter) {
-            frequency++;
-        }
-    }
-    return frequency;
 }
 
 initWordle();

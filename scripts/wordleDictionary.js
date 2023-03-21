@@ -4,7 +4,30 @@
     https://gist.github.com/cfreshman/a03ef2cba789d8cf00c08f767e0fad7b
 */
 
-export const myWords = ['pizza', 'black', 'video', 'apple', 'juice', 'chess', 'music', 'sushi', 'fries', 'games', 'films', 'movie', 'photo', 'sleep', 'puppy'];
+export const myWords = [
+    'pizza', 
+    'black', 
+    'video', 
+    'apple', 
+    'juice', 
+    'chess', 
+    'music', 
+    'sushi', 
+    'fries', 
+    'games', 
+    'films', 
+    'movie', 
+    'photo', 
+    'sleep', 
+    'puppy', 
+    'money', 
+    'magic', 
+    'panda', 
+    'spicy', 
+    'salty',
+    'chill',
+    'mario'
+];
 
 export const wordleDictionary = [
     "aahed",
