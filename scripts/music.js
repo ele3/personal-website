@@ -53,9 +53,7 @@ volumeSlider.addEventListener('mousemove', () => {
     volumeSlider.style.background = color;
 });
 
-initSong(songIndex);
-initVolume();
-
+//Function to initialize the music player for the song at the given index
 function initSong(songIndex) {
     clearInterval(timeInterval);
     
@@ -114,19 +112,12 @@ function playSong(){
         songImage.classList.add('transition-rotate');
     }
 }
+
 function pauseSong(){
     currentSongAudio.pause();
     isPlaying = false;
     playpauseBtn.innerHTML = '<i class="bi bi-play-circle-fill"></i>';
 
-}
-
-function playpauseSong() {
-    if (isPlaying) {
-        pauseSong();
-    } else {
-        playSong();
-    }
 }
 
 function nextSong() {
@@ -155,8 +146,27 @@ function prevSong() {
     pauseSong();
 }
 
+//Updates the progress bar color for the song
 function updatePositionSlider() {
     var x = positionSlider.value;
     var color = 'linear-gradient(90deg, rgb(7, 45, 102)' + x + '%, rgb(173, 195, 249)' + x + '%)';
     positionSlider.style.background = color;
 }
+
+//Function to detect the click on the next, previous, and (play & pause) buttons
+function detectSongControls() {
+    prevBtn.addEventListener('click', prevSong);
+    nextBtn.addEventListener('click', nextSong);
+    playpauseBtn.addEventListener('click', () => {
+        if (isPlaying) {
+            pauseSong();
+        } else {
+            playSong();
+        }
+        }
+    );
+}
+
+initSong(songIndex);
+initVolume();
+detectSongControls();
