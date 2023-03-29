@@ -121,7 +121,7 @@ function getCurrentWord() {
 
 // Check if the word is in the dictionary
 function validWord(word) {
-    return wordleDictionary.includes(word);
+    return wordleDictionary.includes(word) || myWords.includes(word);
 }
 
 function notValidWord() {
