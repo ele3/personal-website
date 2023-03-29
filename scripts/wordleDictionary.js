@@ -13002,4 +13002,5 @@ export const wordleDictionary = [
     "zebra",
     "zesty",
     "zonal",
+    "mario",
 ];
