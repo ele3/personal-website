@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
-    {% include nav_bar.html %}
-    {{ content }}
+    <?php include("_includes/nav_bar.html"); ?>
     <main>
         <!-- main content -->
         <h1 class="page_title">Home</h1>
